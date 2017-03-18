@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
+    font-size: 0;
 }
 body {
     background-color: #f9f9f9;
@@ -19,14 +20,12 @@ body {
 }
 
 .logo {
-//    margin-top: 49px;
     margin-left: 46px;
 }
+
 .header-menu {
     width: 966px;
     height: 40px;
-//    display: inline-block;
-//    text-align: center;
     margin: auto;
     margin-top: 38px;
     background-color: #4e4d4d;
@@ -36,10 +35,11 @@ body {
     list-style: none;
     display: inline-block;
 }
+
 .header-menu__list-element {
     display: inline-block;
       
-        :hover {
+        &:hover {
         content: "";
         background-color: #444444;
         border-left: 1px solid #838383;
@@ -60,7 +60,7 @@ body {
     padding: 0 24px 0 24px; 
     margin: 0 50px 0 0px;
     box-sizing: border-box;
-    font: 14.67px/40px Open Sans, sans-serif;
+    font: 14px/40px Open Sans, sans-serif;
 //    border: 0 1px 0 1px solid #838383;
     //    :hover {
 //        content: "";
@@ -75,27 +75,58 @@ body {
 }
 
 .main-menu {
-    display: inline-block;
+    display: inline-table;
     width: 240px;
     height: 240px;
+    margin-left: 46px;
+//    margin-right: 1px;
     box-sizing: border-box;
     vertical-align: top;
+    border-collapse: collapse;
+}
+
+.main-menu__row-wrapper {
+    display: table-row;
+    border: 1px solid #c8c8c8;
+    border-collapse: collapse;
+
+
 }
 
 .main-menu__elements {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
     display: block;
+//    margin: 5px auto;
+    padding-left: 24px;
+    font: 13px/37px "Open Sans", Arial, sans-serif;
+    text-decoration: none;
+    color: #2c2c2c;
+    
+    &:hover {
+        content: "";
+        padding-left: 34px;
+        background-color: #f9f9f9;
+    }
     
 }
 
 .main-content {
-    display: inline-block;
-    vertical-align: top;
     width: 680px;
+//    float: right;
+    display: inline-block;
+    margin-left: 1px;
+    vertical-align: top;
+//    white-space: nowrap;
+//        margin-left: 1px;
 
 }
 
 .main-content__img-container {
-    display: inline-block;
+    width: 680px;
+    display: block;
+    
 }
 
 .main-content__img {
@@ -103,8 +134,10 @@ body {
 }
 
 .main-content__description {
-    display: inline-block;
+    display: block;
     width: 680px;
+    font: 13px/21px "Open Sans", sans-serif;
+    color: #2c2c2c;
 }
 
 .base-footer {
