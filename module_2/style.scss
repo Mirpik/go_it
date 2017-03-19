@@ -39,13 +39,18 @@ body {
 .header-menu__list-element {
     display: inline-block;
       
-        &:hover {
-        content: "";
-        background-color: #444444;
-        border-left: 1px solid #838383;
-        border-right: 1px solid #838383;
-        box-sizing: border-box;
-    }
+//    &:hover {
+//        content: "";
+//        background-color: yellow;
+//    }    
+    
+//    :hover {
+//        content: "";
+//        background-color: #444444;
+//        border-left: 1px solid #838383;
+//        border-right: 1px solid #838383;
+//        box-sizing: border-box;
+//    }
    
 }
 
@@ -62,15 +67,17 @@ body {
     box-sizing: border-box;
     font: 14px/40px Open Sans, sans-serif;
 //    border: 0 1px 0 1px solid #838383;
-    //    :hover {
-//        content: "";
-//        background-color: #444444;
-//    }
+        &:hover {
+        content: "";
+        background-color: #444444;
+        border-left: 1px solid #838383;
+        border-right: 1px solid #838383;
+    }
 }
 
 .base-main {
-    width: 966px;
-    height: 585px;
+//    width: 966px;
+//    height: 585px;
     margin-top: 40px;
 }
 
@@ -116,7 +123,7 @@ body {
     width: 680px;
 //    float: right;
     display: inline-block;
-    margin-left: 1px;
+    margin-left: 48px;
     vertical-align: top;
 //    white-space: nowrap;
 //        margin-left: 1px;
@@ -142,10 +149,40 @@ body {
 
 .base-footer {
     
+    padding-bottom: 60px;
 }
 
 .footer-menu {
+    @extend .header-menu;
     width: 966px;
     height: 41px;
     background-color: #e1e1e1;
+}
+
+.footer-menu__list-wrapper {
+    @extend .header-menu__list-wrapper;
+    
+}
+.footer-menu__list-element {
+    @extend .header-menu__list-element;    
+
+}
+.footer-menu__list-elemment-href {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 40px;
+    height: 40px;
+    border-left: 1px solid #4e4d4d;
+    border-right: 1px solid #4e4d4d;
+    padding: 0 24px 0 24px; 
+    margin: 0 50px 0 0px;
+    box-sizing: border-box;
+//    @extend .header-menu__list-elemment-href;
+    border: 0;
+    color: #2c2c2c;
+    font: 13px/40px "Open Sans", sans-serif;
+   
+    &:hover {
+        text-decoration: underline;
+    }
 }
